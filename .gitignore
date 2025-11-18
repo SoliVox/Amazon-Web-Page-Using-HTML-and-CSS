@@ -1,0 +1,49 @@
+# Editor directories and files
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS files
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+~*
+
+# Node modules (if you add npm later)
+node_modules/
+npm-debug.log*
+
+# Python (if you use Python server)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Logs
+logs
+*.log
+
+# Environment variables
+.env
+.env.local
+
+# Build outputs (if you add build tools)
+dist/
+build/
+*.min.js
+*.min.css
+
+# Optional: Uncomment if you don't want to commit images
+# assets/
+# main-assets/

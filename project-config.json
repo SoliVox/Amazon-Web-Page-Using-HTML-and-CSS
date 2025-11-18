@@ -1,0 +1,43 @@
+{
+  "project": {
+    "name": "Amazon Web Page Clone",
+    "version": "1.0.0",
+    "description": "A fully responsive Amazon India homepage clone",
+    "author": "SoliVox",
+    "repository": "https://github.com/SoliVox/Amazon-Web-Page-Using-HTML-and-CSS"
+  },
+  "files": {
+    "html": "index.html",
+    "css": "style.css",
+    "js": "script.js"
+  },
+  "colors": {
+    "primary": "#131921",
+    "secondary": "#232f3e",
+    "accent": "#febd69",
+    "link": "#007185",
+    "background": "#e3e6e6",
+    "white": "#ffffff"
+  },
+  "features": [
+    "Responsive Navigation Bar",
+    "Product Category Cards",
+    "Hero Banner Section",
+    "Interactive Search",
+    "Shopping Cart",
+    "Footer with Links",
+    "Mobile Responsive Design"
+  ],
+  "browsers": [
+    "Chrome (latest)",
+    "Firefox (latest)",
+    "Safari (latest)",
+    "Edge (latest)",
+    "Opera (latest)"
+  ],
+  "breakpoints": {
+    "mobile": "480px",
+    "tablet": "768px",
+    "desktop": "1024px"
+  }
+}

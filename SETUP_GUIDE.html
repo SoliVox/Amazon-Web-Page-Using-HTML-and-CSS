@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick Setup Guide - Amazon Clone</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      padding: 40px;
+    }
+    
+    h1 {
+      color: #232f3e;
+      margin-bottom: 10px;
+      font-size: 32px;
+    }
+    
+    .subtitle {
+      color: #666;
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+    
+    .section {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      border-left: 4px solid #ff9900;
+    }
+    
+    h2 {
+      color: #232f3e;
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+    
+    h3 {
+      color: #37475a;
+      margin: 20px 0 10px 0;
+      font-size: 18px;
+    }
+    
+    ul {
+      margin-left: 25px;
+      line-height: 1.8;
+    }
+    
+    li {
+      margin-bottom: 8px;
+      color: #333;
+    }
+    
+    code {
+      background: #fff;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      color: #d63384;
+      border: 1px solid #ddd;
+    }
+    
+    .btn {
+      display: inline-block;
+      background: #ff9900;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 6px;
+      text-decoration: none;
+      margin: 10px 10px 10px 0;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    
+    .btn:hover {
+      background: #e88b00;
+    }
+    
+    .btn-secondary {
+      background: #232f3e;
+    }
+    
+    .btn-secondary:hover {
+      background: #37475a;
+    }
+    
+    .note {
+      background: #fff3cd;
+      border: 1px solid #ffc107;
+      padding: 15px;
+      border-radius: 6px;
+      margin: 20px 0;
+    }
+    
+    .note strong {
+      color: #856404;
+    }
+    
+    .success {
+      background: #d1ecf1;
+      border: 1px solid #0c5460;
+      padding: 15px;
+      border-radius: 6px;
+      margin: 20px 0;
+      color: #0c5460;
+    }
+    
+    .checklist {
+      background: white;
+      padding: 15px;
+      border-radius: 6px;
+      margin: 15px 0;
+    }
+    
+    .checklist li {
+      list-style: none;
+      padding-left: 30px;
+      position: relative;
+    }
+    
+    .checklist li:before {
+      content: "✓";
+      position: absolute;
+      left: 5px;
+      color: #28a745;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 2px solid #e0e0e0;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🚀 Amazon Clone - Quick Setup Guide</h1>
+    <p class="subtitle">Follow these steps to get your Amazon frontend up and running!</p>
+    
+    <div class="section">
+      <h2>📋 Current Status</h2>
+      <ul class="checklist">
+        <li>HTML structure created (<code>index.html</code>)</li>
+        <li>CSS styling completed (<code>style.css</code>)</li>
+        <li>JavaScript functionality added (<code>script.js</code>)</li>
+        <li>Asset folders created (<code>assets/</code> and <code>main-assets/</code>)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>🎯 Next Steps</h2>
+      
+      <h3>Step 1: View Your Website</h3>
+      <p>Open <code>index.html</code> in your browser to see the Amazon frontend!</p>
+      <div class="links">
+        <a href="index.html" class="btn" target="_blank">Open Amazon Clone</a>
+      </div>
+      
+      <h3>Step 2: Add Images (Optional)</h3>
+      <p>For the best experience, add product images to the asset folders. See the Assets Guide section in README.md for details:</p>
+      <ul>
+        <li><strong>Logo:</strong> Add Amazon logo as <code>main-assets/logo.png</code></li>
+        <li><strong>Flag:</strong> Add Indian flag as <code>main-assets/indian flag.png</code></li>
+        <li><strong>Products:</strong> Add product images to <code>assets/</code> folder (see README.md for complete list)</li>
+      </ul>
+      
+      <div class="note">
+        <strong>Quick Tip:</strong> The hero banner already uses an online image URL, so the site will work even without local images. Product cards will show broken images until you add the photos.
+      </div>
+      
+      <h3>Step 3: Free Image Resources</h3>
+      <p>Get free product images from these sites:</p>
+      <ul>
+        <li><strong>Unsplash:</strong> <a href="https://unsplash.com" target="_blank">unsplash.com</a> - High-quality free photos</li>
+        <li><strong>Pexels:</strong> <a href="https://pexels.com" target="_blank">pexels.com</a> - Free stock photos</li>
+        <li><strong>Pixabay:</strong> <a href="https://pixabay.com" target="_blank">pixabay.com</a> - Free images and videos</li>
+        <li><strong>Placeholder:</strong> Use <code>https://via.placeholder.com/500x500</code> for testing</li>
+      </ul>
+      
+      <h3>Step 4: Use a Local Server (Recommended)</h3>
+      <p>For better performance, run a local server:</p>
+      <ul>
+        <li><strong>VS Code:</strong> Install "Live Server" extension and right-click index.html → "Open with Live Server"</li>
+        <li><strong>Python:</strong> Run <code>python -m http.server 8000</code> in the terminal</li>
+        <li><strong>Node.js:</strong> Run <code>npx http-server</code> in the terminal</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>✨ Features Included</h2>
+      <ul>
+        <li><strong>Responsive Design:</strong> Works on desktop, tablet, and mobile</li>
+        <li><strong>Interactive Navigation:</strong> Search bar, cart, account menu</li>
+        <li><strong>Product Cards:</strong> 8+ category cards with images</li>
+        <li><strong>Smooth Scrolling:</strong> Back to top button with smooth animation</li>
+        <li><strong>Hover Effects:</strong> Interactive cards and buttons</li>
+        <li><strong>Complete Footer:</strong> Multi-column footer with links</li>
+        <li><strong>Modern CSS:</strong> Grid and Flexbox layouts</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>🛠️ Customization Tips</h2>
+      
+      <h3>Colors</h3>
+      <p>Edit <code>style.css</code> to change colors:</p>
+      <ul>
+        <li>Navigation: <code>#131921</code> (Amazon dark)</li>
+        <li>Orange accent: <code>#febd69</code></li>
+        <li>Links: <code>#007185</code></li>
+      </ul>
+      
+      <h3>Content</h3>
+      <p>Edit <code>index.html</code> to change:</p>
+      <ul>
+        <li>Product names and descriptions</li>
+        <li>Location (default: Patna 800020)</li>
+        <li>Menu items and links</li>
+        <li>Footer information</li>
+      </ul>
+      
+      <h3>Functionality</h3>
+      <p>Edit <code>script.js</code> to add:</p>
+      <ul>
+        <li>Real search functionality</li>
+        <li>Shopping cart logic</li>
+        <li>User authentication</li>
+        <li>API integrations</li>
+      </ul>
+    </div>
+
+    <div class="success">
+      <strong>🎉 Success!</strong> Your Amazon frontend is ready to use. Open <code>index.html</code> to see it in action!
+    </div>
+
+    <div class="links">
+      <a href="index.html" class="btn" target="_blank">View Website</a>
+      <a href="README.md" class="btn btn-secondary">Full Documentation & Assets Guide</a>
+    </div>
+
+    <footer>
+      <p>Created with ❤️ using HTML, CSS & JavaScript</p>
+      <p style="margin-top: 10px; font-size: 12px;">© 2024 Amazon Clone - For Educational Purposes Only</p>
+    </footer>
+  </div>
+</body>
+</html>
