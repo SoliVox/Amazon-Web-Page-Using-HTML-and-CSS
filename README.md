@@ -83,6 +83,7 @@ Amazon-Web-Page-Using-HTML-and-CSS/
 ## 🛠️ Setup Instructions
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/SoliVox/Amazon-Web-Page-Using-HTML-and-CSS.git
    cd Amazon-Web-Page-Using-HTML-and-CSS
@@ -92,10 +93,10 @@ Amazon-Web-Page-Using-HTML-and-CSS/
    - Place product images in the `assets/` folder
    - Place logo and icons in the `main-assets/` folder
    - See the "Assets Guide" section below for detailed requirements
-
 3. **Open in Browser**
    - Simply open `index.html` in your web browser
    - Or use a local server (recommended):
+
      ```bash
      # Using Python 3
      python -m http.server 8000
@@ -104,6 +105,7 @@ Amazon-Web-Page-Using-HTML-and-CSS/
      npx http-server
      ```
 
+4. **View the Website**
 4. **View the Website**
    - Navigate to `http://localhost:8000` (if using local server)
    - Or directly open the `index.html` file
@@ -156,6 +158,7 @@ To complete the Amazon frontend, you need to add the following images to the res
 #### Assets Folder (`assets/`)
 
 **Product Images:**
+
 - **Watch.jpg** - Smartwatch product image
 - **A1.jpg** to **A4.jpg** - Home decor, furnishings, storage, and lighting
 - **B1.jpg** to **B4.jpg** - Headphones from different brands (boAt, boult, Noise, Zebronics)
