@@ -186,6 +186,8 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 99;
 }
 
 .menuBar ul {
@@ -193,12 +195,33 @@ nav {
   list-style: none;
   gap: 5px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .menuBar ul a {
   padding: 5px 10px;
   font-size: 14px;
   white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.menuBar ul a.all-menu-btn {
+  font-weight: bold;
+}
+
+.menuBar ul a.all-menu-btn i {
+  font-size: 16px;
+}
+
+.menuBar ul a.prime-link {
+  color: #febd69;
+  font-weight: bold;
+}
+
+.menuBar ul a.prime-link i {
+  color: #febd69;
 }
 
 .menuBar .location {
@@ -209,11 +232,128 @@ nav {
   padding: 5px 10px;
   border: 1px solid transparent;
   cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 2px;
 }
 
 .menuBar .location:hover {
   border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.1);
 }
+
+.menuBar .location i:first-child {
+  color: #febd69;
+  font-size: 16px;
+}
+
+.menuBar .location i:last-child {
+  font-size: 14px;
+}
+
+/* All Categories Dropdown Menu */
+.all-categories-menu {
+  position: fixed;
+  top: 0;
+  left: -400px;
+  height: 100vh;
+  width: 365px;
+  background-color: white;
+  z-index: 1000;
+  transition: left 0.3s ease;
+  overflow-y: auto;
+}
+
+.all-categories-menu.active {
+  left: 0;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+  display: none;
+  transition: opacity 0.3s;
+}
+
+.menu-overlay.active {
+  display: block;
+}
+
+.categories-content {
+  padding: 0;
+}
+
+.categories-header {
+  background-color: #232f3e;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.categories-header h3 {
+  font-size: 18px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.close-menu {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: transform 0.3s;
+}
+
+.close-menu:hover {
+  transform: scale(1.2);
+}
+
+.categories-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.categories-list li {
+  border-bottom: 1px solid #ddd;
+}
+
+.categories-list li a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+  color: #232f3e;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s, padding-left 0.3s;
+}
+
+.categories-list li a:hover {
+  background-color: #f3f3f3;
+  padding-left: 25px;
+}
+
+.categories-list li a i {
+  font-size: 18px;
+  color: #007185;
+  width: 25px;
+  text-align: center;
+}
+
 
 /* Quick Links */
 .quickLink {
