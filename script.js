@@ -115,13 +115,94 @@ document.addEventListener('DOMContentLoaded', function() {
   const menuItems = document.querySelectorAll('.menuBar ul a');
   menuItems.forEach(item => {
     item.addEventListener('click', function(e) {
-      e.preventDefault();
-      if (this.textContent.trim()) {
-        console.log('Navigating to: ' + this.textContent.trim());
-        // In a real application, this would navigate to different sections
+      // Don't prevent default for all-menu-btn as it's handled separately
+      if (!this.classList.contains('all-menu-btn')) {
+        e.preventDefault();
+        if (this.textContent.trim()) {
+          console.log('Navigating to: ' + this.textContent.trim());
+          // In a real application, this would navigate to different sections
+        }
       }
     });
   });
+
+  // All Categories Menu functionality
+  const allMenuBtn = document.querySelector('.all-menu-btn');
+  const allCategoriesMenu = document.getElementById('allCategoriesMenu');
+  const menuOverlay = document.getElementById('menuOverlay');
+  const closeMenuBtn = document.getElementById('closeMenuBtn');
+
+  // Open All Categories Menu
+  if (allMenuBtn) {
+    allMenuBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      if (allCategoriesMenu && menuOverlay) {
+        allCategoriesMenu.classList.add('active');
+        menuOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+      }
+    });
+  }
+
+  // Close Menu function
+  function closeAllCategoriesMenu() {
+    if (allCategoriesMenu && menuOverlay) {
+      allCategoriesMenu.classList.remove('active');
+      menuOverlay.classList.remove('active');
+      document.body.style.overflow = ''; // Restore scrolling
+    }
+  }
+
+  // Close menu with close button
+  if (closeMenuBtn) {
+    closeMenuBtn.addEventListener('click', closeAllCategoriesMenu);
+  }
+
+  // Close menu when clicking overlay
+  if (menuOverlay) {
+    menuOverlay.addEventListener('click', closeAllCategoriesMenu);
+  }
+
+  // Close menu with Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && allCategoriesMenu && allCategoriesMenu.classList.contains('active')) {
+      closeAllCategoriesMenu();
+    }
+  });
+
+  // Category items click handler
+  const categoryLinks = document.querySelectorAll('.categories-list a');
+  categoryLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const categoryName = this.textContent.trim();
+      console.log('Category selected: ' + categoryName);
+      alert('Navigating to: ' + categoryName);
+      closeAllCategoriesMenu();
+      // In a real application, this would navigate to category pages
+    });
+  });
+
+  // Location availability check functionality
+  const locationCheck = document.querySelector('.location-check');
+  if (locationCheck) {
+    locationCheck.addEventListener('click', function() {
+      const pincode = prompt('Enter your pincode to check product availability:', '800020');
+      if (pincode && pincode.trim() !== '') {
+        // Validate pincode (simple 6-digit validation)
+        if (/^\d{6}$/.test(pincode)) {
+          alert(`✓ Checking availability for pincode: ${pincode}\n\nProducts are available for delivery to this location!`);
+          // Update the main location display
+          const mainLocation = document.querySelector('.set_location .first-line');
+          if (mainLocation) {
+            mainLocation.textContent = `Delivering to ${pincode}`;
+          }
+        } else {
+          alert('Please enter a valid 6-digit pincode.');
+        }
+      }
+    });
+  }
 
   // Quick links functionality
   const quickLinks = document.querySelectorAll('.quickLink ul a');
