@@ -1,39 +1,37 @@
 // Amazon Frontend JavaScript
+'use strict';
+
+// Utility function for element selection
+const $ = (selector, parent = document) => parent.querySelector(selector);
+const $$ = (selector, parent = document) => parent.querySelectorAll(selector);
 
 // Smooth scroll to top functionality
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
   
   // Back to top button
-  const backTopBtn = document.querySelector('.backTop');
-  if (backTopBtn) {
-    backTopBtn.addEventListener('click', function(e) {
-      e.preventDefault();
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-  }
+  const backTopBtn = $('.backTop');
+  backTopBtn?.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 
   // Search functionality
-  const searchIcon = document.querySelector('.search');
-  const searchInput = document.querySelector('.search_box input');
+  const searchIcon = $('.search');
+  const searchInput = $('.search_box input');
   
-  if (searchIcon && searchInput) {
-    searchIcon.addEventListener('click', function() {
-      if (searchInput.value.trim() !== '') {
-        alert('Searching for: ' + searchInput.value);
-        // In a real application, this would trigger a search
-      }
-    });
+  const performSearch = () => {
+    const query = searchInput?.value.trim();
+    if (query) {
+      console.log('Searching for:', query);
+      alert(`Searching for: ${query}`);
+      // In a real application, this would trigger a search
+    }
+  };
 
-    searchInput.addEventListener('keypress', function(e) {
-      if (e.key === 'Enter' && searchInput.value.trim() !== '') {
-        alert('Searching for: ' + searchInput.value);
-        // In a real application, this would trigger a search
-      }
-    });
-  }
+  searchIcon?.addEventListener('click', performSearch);
+  searchInput?.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') performSearch();
+  });
 
   // Sign in button
   const signInBtn = document.querySelector('.newcustomer button');
@@ -217,15 +215,4 @@ document.addEventListener('DOMContentLoaded', function() {
   // Console welcome message
   console.log('%c Welcome to Amazon Clone! ', 'background: #232f3e; color: #fff; font-size: 16px; padding: 10px;');
   console.log('%c This is a frontend demo ', 'background: #febd69; color: #000; font-size: 14px; padding: 5px;');
-});
-
-// Add search input if it doesn't exist
-window.addEventListener('load', function() {
-  const searchBox = document.querySelector('.search_box');
-  if (searchBox && !searchBox.querySelector('input')) {
-    const input = document.createElement('input');
-    input.type = 'text';
-    input.placeholder = 'Search Amazon.in';
-    searchBox.insertBefore(input, searchBox.querySelector('.camera_search'));
-  }
 });
