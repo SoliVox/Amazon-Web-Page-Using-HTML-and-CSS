@@ -203,11 +203,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Quick links functionality
-  const quickLinks = document.querySelectorAll('.quickLink ul a');
-  quickLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
+  $$('.quickLink ul a').forEach(link => {
+    link.addEventListener('click', (e) => {
       e.preventDefault();
-      console.log('Quick link clicked: ' + this.textContent);
+      console.log('Quick link clicked:', link.textContent.trim());
       // In a real application, this would navigate to fashion categories
     });
   });
